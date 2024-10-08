@@ -13,7 +13,7 @@ using PetFinder.Infrastructure;
 namespace PetFinder.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240918081416_Init")]
+    [Migration("20241008130325_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -87,8 +87,8 @@ namespace PetFinder.Infrastructure.Migrations
                         .HasColumnType("character varying(64)")
                         .HasColumnName("animal_type");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("timestamp with time zone")
+                    b.Property<DateOnly>("BirthDate")
+                        .HasColumnType("date")
                         .HasColumnName("birth_date");
 
                     b.Property<string>("Color")

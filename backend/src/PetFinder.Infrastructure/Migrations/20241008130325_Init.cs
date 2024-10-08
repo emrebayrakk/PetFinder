@@ -77,7 +77,7 @@ namespace PetFinder.Infrastructure.Migrations
                     weight = table.Column<double>(type: "double precision", nullable: false),
                     height = table.Column<double>(type: "double precision", nullable: false),
                     owner_phone = table.Column<string>(type: "character varying(16)", maxLength: 16, nullable: false),
-                    birth_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    birth_date = table.Column<DateOnly>(type: "date", nullable: false),
                     is_castrated = table.Column<bool>(type: "boolean", nullable: false),
                     is_vaccinated = table.Column<bool>(type: "boolean", nullable: false),
                     help_status = table.Column<int>(type: "integer", nullable: false),

@@ -122,7 +122,7 @@ public class Pet : SharedKernel.Entity<PetId>
             photos: photos);
     }
 
-    private static UnitResult<Error> Validate(
+    public static UnitResult<Error> Validate(
         string name,
         string animalType,
         string generalDescription, 
